@@ -51,7 +51,7 @@ http://127.0.0.1:8000/api/polls/
 
 ## Auth
 
-#### Creating JWT token for CRUD Polls, Questions, Options
+#### Create JWT token for CRUD Polls, Questions, Options
 ### Request
 ```http
 POST /auth/token/
@@ -61,8 +61,8 @@ POST /auth/token/
 | :--- | :--- | :--- |
 | `username` | `string` | **Required** |
 | `password` | `string` | **Required** |
-### Response example
 
+### Response example
 ```javascript
 {
     "refresh": "eyJ0eXAiOiJKV1QiLCJhbGc..."
@@ -107,6 +107,7 @@ DELETE /api/polls/{poll_id}/ --header 'Authorization: Bearer <access token>'
 ```http
 PUT /api/polls/{poll_id}/ --header 'Authorization: Bearer <access token>'
 ```
+
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
 | `title` | `string` | **max_length=300, required** |
@@ -148,6 +149,7 @@ DELETE /api/questions/{question_id}/ --header 'Authorization: Bearer <access tok
 ```http
 PUT /api/questions/{question_id}/ --header 'Authorization: Bearer <access token>'
 ```
+
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
 | `text` | `text` | **Required**. |
@@ -178,6 +180,7 @@ DELETE /api/options/{option_id}/ --header 'Authorization: Bearer <access token>'
 ```http
 PUT /api/options/{option_id}/ --header 'Authorization: Bearer <access token>'
 ```
+
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
 | `text` | `text` | **Not required, default='Enter text'**. |
@@ -227,6 +230,7 @@ DELETE /api/answer/{answer_id}/
 ```http
 PUT /api/answer/{answer_id}/
 ```
+
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
 | `text_form` | `text` | **max_length=300, not required** |
@@ -268,7 +272,7 @@ GET /api/user/{user_id}/polls/
 
 ### Get all users answers in current poll
 ```http
-GET /api/user/{user_id}/polls/{poll_id}
+GET /api/user/{user_id}/polls/{poll_id}/
 ```
 
 
