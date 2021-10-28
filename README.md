@@ -50,8 +50,8 @@ http://127.0.0.1:8000/api/polls/
 
 
 ## Auth
-
-#### Create JWT token for CRUD Polls, Questions, Options
+#### Create JWT token for CRUD Polls, Questions, Options 
+#### P.S. superuser already created from fixtures username:admin, password:admin
 ### Request
 ```http
 POST /auth/token/
