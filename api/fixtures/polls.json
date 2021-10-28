@@ -1,0 +1,124 @@
+[
+  {
+    "model": "api.poll",
+    "pk": 1,
+    "fields": {
+      "title": "Спортивные опрос",
+      "description": "Опрос людей на предмет их отношения к спорту"
+    }
+  },
+  {
+    "model": "api.question",
+    "pk": 1,
+    "fields": {
+      "text": "Как вы относитесь к спорту?",
+      "type": "text",
+      "poll": 1
+    }
+  },
+    {
+    "model": "api.question",
+    "pk": 2,
+    "fields": {
+      "text": "Занимаетесь ли вы физическими упражнениями хотя бы раз в день?",
+      "type": "one",
+      "poll": 1
+    }
+  },
+  {
+    "model": "api.question",
+    "pk": 3,
+    "fields": {
+      "text": "Какой ваш любимый вид физической активности?",
+      "type": "many",
+      "poll": 1
+    }
+  },
+  {
+    "model": "api.option",
+    "pk": 1,
+    "fields": {
+      "text": "Да",
+      "question": 2
+    }
+  },
+  {
+    "model": "api.option",
+    "pk": 2,
+    "fields": {
+      "text": "Нет",
+      "question": 2
+    }
+  },
+  {
+    "model": "api.option",
+    "pk": 3,
+    "fields": {
+      "question": 1
+    }
+  },
+  {
+    "model": "api.option",
+    "pk": 4,
+    "fields": {
+      "text": "Бег",
+      "question": 3
+    }
+  },
+  {
+    "model": "api.option",
+    "pk": 5,
+    "fields": {
+      "text": "Гантели",
+      "question": 3
+    }
+  },
+  {
+    "model": "api.option",
+    "pk": 6,
+    "fields": {
+      "text": "Лежать на диване",
+      "question": 3
+    }
+  },
+  {
+    "model": "api.answer",
+    "pk": 1,
+    "fields": {
+      "text_form": "Не могу точно сказать",
+      "question": 1,
+      "poll": 1,
+      "user": 1
+    }
+  },
+  {
+    "model": "api.answer",
+    "pk": 2,
+    "fields": {
+      "question": 2,
+      "poll": 1,
+      "option": 2,
+      "user": 1
+    }
+  },
+  {
+    "model": "api.answer",
+    "pk": 3,
+    "fields": {
+      "question": 3,
+      "poll": 1,
+      "option": 4,
+      "user": 1
+    }
+  },
+  {
+    "model": "api.answer",
+    "pk": 4,
+    "fields": {
+      "question": 3,
+      "poll": 1,
+      "option": 5,
+      "user": 1
+    }
+  }
+]
