@@ -27,9 +27,8 @@ users_router.register(r'polls', PollWithUserAnswersViewSet, basename='polls')
 
 
 urlpatterns = [
-    path('', include(router.urls)),
-    path('', include(users_router.urls)),
+    path('api/', include(router.urls)),
+    path('api/', include(users_router.urls)),
     path('admin/', admin.site.urls),
-    path('auth/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('auth/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('auth/token/', TokenObtainPairView.as_view(), name='token_obtain_pair')
 ]

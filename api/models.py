@@ -30,7 +30,7 @@ class Question(models.Model):
     def delete(self, *args, **kwargs):
         if self.poll.start_at is not None:
             raise exceptions.PermissionDenied
-        super().delete(self, *args, **kwargs)
+        return super().delete(*args, **kwargs)
 
 
 class Option(models.Model):

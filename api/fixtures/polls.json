@@ -1,10 +1,22 @@
 [
   {
+    "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "username": "admin",
+            "password": "pbkdf2_sha256$150000$TWtPpnXjgqsV$glxm4s1SFpNRqviLlvXiVxURPIV6F3GhCmMqmwgSJ5k=",
+            "is_superuser": true,
+            "is_staff": true,
+            "is_active": true
+        }
+  },
+  {
     "model": "api.poll",
     "pk": 1,
     "fields": {
       "title": "Спортивные опрос",
-      "description": "Опрос людей на предмет их отношения к спорту"
+      "description": "Опрос людей на предмет их отношения к спорту",
+      "start_at": "2021-10-28T07:42:25Z"
     }
   },
   {
